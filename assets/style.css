@@ -33,6 +33,16 @@
     line-height: 1.25;
   }
   
+ul {
+  list-style-type: none;
+  display: flex;
+}
+
+ul li {
+  display:flex;
+  margin-left: 25px;
+  text-decoration: underline;
+}
   main {
     margin: 20px auto;
     width: 94%;
@@ -42,7 +52,7 @@
     font-size: 1.2rem;
   }
   
-  .btn {
+  .btn, .wilson, .naples, .richmond {
     font-size: 1.3rem;
     text-decoration: none;
     padding: 6px 5px;

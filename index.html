@@ -4,7 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap"
+      rel="stylesheet"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="assets/style.css" />
     <title>ELL Weather Dashboard</title>
   </head>
@@ -21,27 +28,63 @@
         <div class="card">
           <h3 class="card-header text-uppercase">Search for a City</h3>
           <form id="user-form" class="card-body">
-            <label class="form-label" for="username">City Name</label>
-            <input name="username" id="username" type="text" autofocus="true" class="form-input"/>
-            <button type="submit" class="btn" id = 'show'>Get Weather</button>
+            <label class="form-label" for="cityName">City Name</label>
+            <input
+              id="search"
+              type="text"
+              class="form-input"
+            />
+            <button id="searchStart" type="button" class="btn" >Get Weather</button>
           </form>
         </div>
-        
+
         <div class="card">
+          <h3 class="card-header text-uppercase">Recent Searches</h3>
+          <div id="searchResults" class="card-body"></div>
           <h3 class="card-header text-uppercase">Suggested Cities</h3>
-          <div id="language-buttons" class="card-body">
-            <button class="btn">Richmond</button>
-            <button class="btn">Wilson</button>
-            <button class="btn">Naples</button>
+          <div class="card-body">
+            <button id = "richmond" class="richmond">Richmond</button>
+            <button class="wilson">Wilson</button>
+            <button class="naples">Naples</button>
           </div>
         </div>
       </div>
 
       <div class="col-12 col-md-8">
         <h2 class="subtitle">
-          5 Day Weather Forecast: <span id="repo-search-term"></span>
+          5 Day Weather Forecast: 
         </h2>
-        <div id="search-result" class="list-group"></div>
+        <div id="search-result" class="list-group">
+          <ul> 
+              <li id="day1"></li><br />
+              <li>Temperature:<li id="t2"></li> &#176;</li><br />
+              <li>Wind:<li id="w2"></li> mph</li><br />
+              <li>Humidity:<li id="hum2"></li> %</li>
+            </ul>
+            <ul> 
+              <li id="day2"></li><br />
+              <li>Temperature:<li id="t3"></li> &#176;</li><br>
+              <li>Wind:<li id="w3"></li> mph</li><br />
+              <li>Humidity:<li id="hum3"></li> %</li>
+            </ul>
+          <ul> 
+              <li id="day3"></li><br />
+              <li>Temperature:<li id="t4"></li> &#176;</li><br />
+              <li>Wind:<li id="w4"></li> mph</li><br />
+              <li>Humidity:<li id="hum4"></li> %</li>
+            </ul>
+            <ul> 
+              <li id="day4"></li><br />
+              <li>Temperature:<li id="t5"></li> &#176;</li><br />
+              <li>Wind:<li id="w5"></li> mph</li><br />
+              <li>Humidity:<li id="hum5"></li> %</li>
+            </ul>
+            <ul> 
+              <li id="day5"></li><br />
+              <li>Temperature:<li id="t6"></li> &#176;</li><br />
+              <li>Wind:<li id="w6"></li> mph</li><br />
+              <li>Humidity:<li id="hum6"></li> %</li>
+           </ul>
       </div>
     </main>
 
